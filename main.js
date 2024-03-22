@@ -13,6 +13,8 @@ client.player = new Player(client, {
         highWaterMark: 1 << 25
     }
 });
+
+client.color = "#2f3136";
 client.player.extractors.loadDefault()
 
 client.commands = new Collection();
