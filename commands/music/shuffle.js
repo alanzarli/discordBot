@@ -19,8 +19,8 @@ module.exports = {
         const voiceChannelMember = interaction.member.voice.channel;
         const voiceChannelBot = (await interaction.guild.members.fetchMe()).voice.channel;
 
-        if(!voiceChannelMember) return await interaction.followUp('You are not in a voice channel :(.');
-        if (voiceChannelBot && voiceChannelBot.id !== voiceChannelMember.id) return await interaction.followUp('You are not in the same voice channel than the bot :(.')
+        if(!voiceChannelMember) return await interaction.followUp('you are not in a voice channel :(.');
+        if (voiceChannelBot && voiceChannelBot.id !== voiceChannelMember.id) return await interaction.followUp('you are not in the same voice channel than the bot :(.')
 
         queue.tracks.shuffle();
         await interaction.reply("queue's been shuffled succesfully :)")

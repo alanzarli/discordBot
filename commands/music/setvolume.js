@@ -25,8 +25,8 @@ module.exports = {
         const volume = interaction.options.getNumber('volume');
         if (queue.node.volume === volume) return await interaction.reply(`the volume is already at \`${queue.node.volume}%\`.`);
 
-        await interaction.reply(`the volume is now at \`${queue.node.volume}\`.`);
         queue.node.setVolume(volume);
+        await interaction.reply(`the volume is now at \`${queue.node.volume}\`%.`);
 
     }
 }

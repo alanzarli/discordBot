@@ -21,8 +21,7 @@ module.exports = {
         if (voiceChannelBot && voiceChannelBot.id !== voiceChannelMember.id) return await interaction.followUp('You are not in the same voice channel than the bot :(.')
 
         try {
-        
-            const { track } = await interaction.client.player.play(voiceChannelMemeber, song, {
+            const { track } = await interaction.client.player.play(voiceChannelMember, song, {
                 requestedBy: interaction.user,
                 nodeOptions: {
                     metadata: interaction,
